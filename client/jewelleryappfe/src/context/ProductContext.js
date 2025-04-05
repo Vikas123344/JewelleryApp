@@ -13,7 +13,7 @@ export const ProductProvider = ({ children }) => {
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
-
+  console.log("products",products,bdurl)
   const handleSearch = () => {
     fetch(`${bdurl}/api1/search?query=${searchTerm}`)
       .then((response) => response.json())

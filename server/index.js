@@ -5,7 +5,7 @@ const productRoutes = require('./routes/productRoutes');
 const connectDB = require('./db/connection');
 const cors=require('cors');
 const app = express();
-// app.use(cors())
+app.use(cors())
 const port = 3000;
 
 // Middleware
