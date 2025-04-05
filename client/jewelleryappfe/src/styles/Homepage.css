@@ -1,0 +1,194 @@
+/* Home Page Styles */
+.home-page {
+    padding: 24px;
+    background: #f7fafc;
+    min-height: 100vh;
+  }
+  
+  .search-bar {
+    max-width: 800px;
+    margin: 0 auto 32px;
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Mobile responsive search bar */
+  @media (max-width: 640px) {
+    .search-bar {
+      flex-direction: column;
+      padding: 12px;
+      gap: 8px;
+    }
+    
+    .home-page {
+      padding: 16px;
+    }
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .search-bar button {
+    padding: 12px 24px;
+    background: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  
+  .search-bar button:hover {
+    background: #2d3748;
+  }
+  
+  .camera-icon {
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .camera-icon:hover {
+    background: #e2e8f0;
+  }
+  
+  .categories {
+    margin-top: 32px;
+  }
+  
+  .category-slider {
+    margin-bottom: 48px;
+  }
+  
+  .category-slider h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    color: #2d3748;
+    padding-left: 16px;
+  }
+  
+  /* Slider styles */
+  .slider-container {
+    position: relative;
+    padding: 0 48px;
+  }
+  
+  @media (max-width: 640px) {
+    .slider-container {
+      padding: 0 32px;
+    }
+  }
+  
+  .slider {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 8px 4px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider > * {
+    flex: 0 0 280px; /* Fixed width for cards */
+    scroll-snap-align: start;
+  }
+  
+  /* Slider navigation buttons */
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+  }
+  
+  .slider-nav:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .slider-nav.prev {
+    left: 0;
+  }
+  
+  .slider-nav.next {
+    right: 0;
+  }
+  
+  /* Search results grid */
+  .search-results .slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 16px;
+    overflow: visible;
+  }
+  
+  @media (max-width: 640px) {
+    .search-results .slider {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  .tooltip {
+    position: absolute;
+    top: -30px; /* Adjust the position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background:  #2d3748;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    pointer-events: none; /* Prevent tooltip from blocking clicks */
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .camera-icon:hover + .tooltip {
+    opacity: 1;
+  }
+  .diamond {
+    width: 12px;
+    height: 12px;
+    background:  #2d3748;
+    position: absolute;
+    bottom: -6px; /* Slightly overlaps the tooltip */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }

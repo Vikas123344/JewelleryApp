@@ -1,0 +1,136 @@
+/* Product Details Styles */
+.product-details {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  
+  .details-grid div {
+    padding: 16px;
+    background: #f7fafc;
+    border-radius: 8px;
+    color: #4a5568;
+  }
+  
+  .details-grid strong {
+    color: #2d3748;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .images {
+    position: relative;
+    margin-top: 32px;
+  }
+  
+  /* .carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    height: 500px;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    background: #f7fafc;
+  }
+   */
+   .carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    height: 500px;
+    width: 100%; /* Ensures proper layout */
+  }
+  
+  .carousel-slide {
+    display: flex; /* Aligns images in a row */
+    width: 100%; /* Matches the carousel's width */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    flex-shrink: 0; /* Prevents shrinking */
+  }
+  
+  .carousel-buttons {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .carousel-dot.active {
+    background: white;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-arrow.prev {
+    left: 16px;
+  }
+  
+  .carousel-arrow.next {
+    right: 16px;
+  }
